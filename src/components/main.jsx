@@ -17,12 +17,12 @@ class Carta extends Component  {
 <Col lg={2} md={3} sm={6}>
                 
               <Card
-                style={{ width: "10rem" }}
+                style={{ width: "10rem" , height:"20rem"}}
                 className="card mt-4 ms-5  "
                 key={book.category}
                 onClick={this.setState({...this.state.selectedCard, selectedCard: true})}
               >
-                <Card.Img src={book.img} />
+                <Card.Img src={book.img} style={{ width: "100%", height:"20rem", overflow: "hidden", display: "block"}} />
                 <Card.Body>
                   <Card.Title className="text-black fw-bolder">{book.title}</Card.Title>
                   <Card.Text className="text-black fw-bold">Price $ : {book.price}</Card.Text>
