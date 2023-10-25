@@ -46,7 +46,9 @@ transform: scale(0.9);
 
 .card{
 min-width: 185px;
-min-height: 507px;
+min-height: 450px;
+margin-top: 2em;
+margin-left: 3em;
 }
 
 
@@ -55,7 +57,6 @@ min-height: 507px;
   margin-bottom: 0.5em;
 }
 
-.card ::selection{
-
-  border-color: solid 3px red;
+.red-border {
+  border: 3px solid red;
 }

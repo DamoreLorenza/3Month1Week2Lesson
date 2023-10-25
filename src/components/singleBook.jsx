@@ -1,35 +1,34 @@
-import { Button, Card, Container, Row, Col } from "react-bootstrap";
+import { Component } from 'react'
+import { Card } from 'react-bootstrap'
 
-import horror from "../book/horror.json";
-
-const SingleBook = (props) => {
-    props=horror[30]
-  return (
-    <Container >
-      <Row>
-        <Col lg={2} md={3} sm={6}>
-                
-              <Card
-                style={{ width: "10rem" }}
-                className="card mt-4 ms-5 " border="light"
-                key={horror.asin}
-              >
-                <Card.Img src={props.img}/>
-                <Card.Body>
-                  <Card.Title className="text-black fw-bolder">{props.title}</Card.Title>
-                  <Card.Text className="text-black fw-bold">Price $ : {props.price}</Card.Text>
-                  <Card.Text className="text-black fw-bold">Category: {props.category}</Card.Text>
-                  <Button variant="success">Buy It Now!</Button>
-                </Card.Body>
-              </Card>
-              </Col>
-          
-        
-      </Row>
-    </Container>
-  );
-};
-
-export default SingleBook;
+class SingleBook extends Component {
+    state = {
+      selected: false,
+    }
+  
+    toggleSelected = () => {
+      this.setState({
+        selected: !this.state.selected, 
+       
+      })
+    }
+  
+    render() {
+      return (
+        <Card style={{ width: "10rem" , height:"15rem"}} className={this.state.selected ? 'red-border' : ''}>
+          <Card.Img
+            variant="top"
+            src={this.props.book.img}
+            onClick={this.toggleSelected}
+          />
+          <Card.Body>
+            <Card.Title>{this.props.book.title}</Card.Title>
+          </Card.Body>
+        </Card>
+      )
+    }
+  }
+  
+  export default SingleBook
 
 

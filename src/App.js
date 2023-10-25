@@ -4,9 +4,9 @@ import NavBar from "./components/NavBar";
 import Footer from "./components/footer";
 import Alerttt from "./components/alert";
 import Carta from "./components/main";
-import { Container, Row } from "react-bootstrap";
+import horror from './book/horror.json'
 import Alert from 'react-bootstrap/Alert';
-import SingleBook from "./components/singleBook";
+import SingleBook from './components/singleBook'
 import BookList from "./components/bookList";
 
 function App() {
@@ -20,7 +20,7 @@ function App() {
           Offerta del giorno
         </Alert>
         
-        <BookList/>
+        <BookList manyBooks={horror} />
       <main fluid="true">
         <h1 className="titolo">Welcome!</h1>
         <Alerttt />

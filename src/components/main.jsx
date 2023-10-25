@@ -2,9 +2,10 @@ import { Button, Card, Container, Row, Col } from "react-bootstrap";
 
 import horror from "../book/horror.json";
 import { Component } from "react";
+
 class Carta extends Component  {
 
-  state={selectedCard: false}
+ 
   
 
   render(){
@@ -18,9 +19,9 @@ class Carta extends Component  {
                 
               <Card
                 style={{ width: "10rem" , height:"20rem"}}
-                className="card mt-4 ms-5  "
+                className="mt-3 ms-5 mb-2"
                 key={book.category}
-                onClick={this.setState({...this.state.selectedCard, selectedCard: true})}
+                
               >
                 <Card.Img src={book.img} style={{ width: "100%", height:"20rem", overflow: "hidden", display: "block"}} />
                 <Card.Body>
