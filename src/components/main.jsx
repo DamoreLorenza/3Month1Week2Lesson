@@ -1,26 +1,32 @@
 import { Button, Card, Container, Row, Col } from "react-bootstrap";
 
 import horror from "../book/horror.json";
+import { Component } from "react";
+class Carta extends Component  {
 
-const Carta = () => {
+  state={selectedCard: false}
+  
+
+  render(){
   return (
     <Container fluid="true">
       <Row>
         
           {horror.map((book) => {
             return (
-<Col md={3}>
+<Col lg={2} md={3} sm={6}>
                 
               <Card
-                style={{ width: "14rem" }}
-                className="mt-4 ms-3 border border-black me-3"
-                key={book.asin}
+                style={{ width: "10rem" }}
+                className="card mt-4 ms-5  "
+                key={book.category}
+                onClick={this.setState({...this.state.selectedCard, selectedCard: true})}
               >
                 <Card.Img src={book.img} />
                 <Card.Body>
-                  <Card.Title>{book.title}</Card.Title>
-                  <Card.Text>Price $ : {book.price}</Card.Text>
-                  <Card.Text>Category: {book.category}</Card.Text>
+                  <Card.Title className="text-black fw-bolder">{book.title}</Card.Title>
+                  <Card.Text className="text-black fw-bold">Price $ : {book.price}</Card.Text>
+                  <Card.Text className="text-black fw-bold">Category: {book.category}</Card.Text>
                   <Button variant="success">Buy It Now!</Button>
                 </Card.Body>
               </Card>
@@ -31,6 +37,7 @@ const Carta = () => {
       </Row>
     </Container>
   );
+}
 };
 
 export default Carta;

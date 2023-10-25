@@ -1,11 +1,12 @@
 .App {
   text-align: center;
+  min-height: 100vh;
+  width: auto;
+
+  background-color: rgba(232, 232, 232, 0.5);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -35,4 +36,26 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.card:hover {
+
+transform: scale(0.9);
+
+}
+
+.card{
+min-width: 185px;
+min-height: 507px;
+}
+
+
+.titolo{
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+.card ::selection{
+
+  border-color: solid 3px red;
 }

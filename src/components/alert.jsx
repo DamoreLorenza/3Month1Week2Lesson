@@ -3,13 +3,11 @@ import Alert from 'react-bootstrap/Alert';
 function Alerttt() {
   return (
     <>
-      {[
-        'success',
-      ].map((variant) => (
-        <Alert key={variant} variant={variant}>
+     
+        <Alert  variant="success" className='ms-3 me-3'>
           Buy React Books
         </Alert>
-      ))}
+      
     </>
   );
 }
