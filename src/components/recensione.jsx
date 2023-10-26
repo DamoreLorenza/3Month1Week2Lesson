@@ -12,13 +12,13 @@ class CommentArea extends Component {
   };
 
   ButtonSubmit = (e) => {
-    e.Prevent.Default();
+    e.PreventDefault();
 
     fetch("https://striveschool-api.herokuapp.com/api/comments/", {
       method: "POST",
       body: JSON.stringify(this.state.recensione),
       headers: {
-        "Content-Type": "Application/JSON",
+        'Content-Type': "application/json",
         Authorization:
           "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTNhNjQ4MWY2ZTNkZDAwMTQ5NWU0NTIiLCJpYXQiOjE2OTgzMjU2MzMsImV4cCI6MTY5OTUzNTIzM30.5luXjylsmji8ZOKbMl66Xq5gXr8CjBWL0LF1esqJSIw",
       },
@@ -37,6 +37,7 @@ class CommentArea extends Component {
 
   render() {
     return (
+      <>
       <div className="d-flex justify-content-between" key="horror.asin">
         <InputGroup>
           <InputGroup.Text>Lascia una Recensione</InputGroup.Text>
@@ -58,6 +59,7 @@ class CommentArea extends Component {
           invio
         </Button>
       </div>
+      </>
     );
   }
 }
