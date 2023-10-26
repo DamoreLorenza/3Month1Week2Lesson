@@ -8,6 +8,8 @@ import horror from './book/horror.json'
 import Alert from 'react-bootstrap/Alert';
 import SingleBook from './components/singleBook'
 import BookList from "./components/bookList";
+import CommentArea from "./components/recensione"
+import Commenti from "./components/commenti";
 
 function App() {
   return (
@@ -21,6 +23,8 @@ function App() {
         </Alert>
         
         <BookList manyBooks={horror} />
+        <CommentArea/>
+        <Commenti/>
       <main fluid="true">
         <h1 className="titolo">Welcome!</h1>
         <Alerttt />
